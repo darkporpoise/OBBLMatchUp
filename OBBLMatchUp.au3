@@ -13,7 +13,7 @@
 	#AutoIt3Wrapper_Res_Field = Compiled By|Tom
 	#AutoIt3Wrapper_Res_Field=AutoIt Version|%AutoItVer%
 	#AutoIt3Wrapper_Res_Description=Automatically Upload you Cyanide games to your OBBLM server
-	#AutoIt3Wrapper_Res_Fileversion=1.0.0.2 ;This version is used to determine if the script should update itself
+	#AutoIt3Wrapper_Res_Fileversion=0.1.0 ;This version is used to determine if the script should update itself
 	#AutoIt3Wrapper_Run_Tidy=Y ; tidy the script prior to compiling
 	#Tidy_Parameters= /reel /sf /ri
 	#AutoIt3Wrapper_UseX64=N ; Compile 32bit version
@@ -399,7 +399,7 @@ DirRemove($sTEMP_FOLDER, 1) ; Delete Temp folder
 		Local $sDriveLetter = ""
 		Local $sDriveUnc = ""
 		For $i = 65 To 90
-			$sDriveLetter = Chr($i) & ":"
+;~ 			$sDriveLetter = Chr($i) & ":"
 			$sDriveUnc = DriveMapGet($sDriveLetter)
 			If $sDriveUnc Then
 				$Path = StringReplace($Path, $sDriveUnc, $sDriveLetter, 1)
